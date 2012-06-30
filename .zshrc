@@ -37,7 +37,7 @@ done
 # An Xterm 256 colour chart can be found here: http://upload.wikimedia.org/wikipedia/commons/9/95/Xterm_color_chart.png
 
 setopt prompt_subst
-PROMPT='`wunderprompt/prompt $?`'
+PROMPT='`~/.zsh/wunderprompt/prompt $?`'
 RPROMPT='%{$FG[240]%}[%~] (%D %*)%{$reset_color%}'
 
 # Keybindings to make special keys work - https://wiki.archlinux.org/index.php/Zsh#Key_Bindings
