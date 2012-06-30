@@ -1,0 +1,3 @@
+[submodule "wunderprompt"]
+	path = wunderprompt
+	url = git@github.com:BenBergman/wunderprompt.git
