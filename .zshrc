@@ -27,9 +27,14 @@ autoload -U colors && colors
 autoload -U compinit && compinit
 
 zstyle ':completion:*' menu select
-setopt completealiases \
-       autocd \
-       prompt_subst
+
+setopt appendhistory
+setopt autocd
+setopt auto_pushd         # cd command pushes directories to the pushd/popd stack
+setopt completealiases
+setopt correct            # attempt to correct spelling
+setopt dvorak             # use Dvorak instead of qwerty as basis for typo correction
+setopt prompt_subst
 
 # Spectrum (https://github.com/sykora/etc/blob/master/zsh/functions/spectrum)
 # A script to make using 256 colors in zsh less painful.
@@ -56,7 +61,16 @@ done
 PROMPT='`~/.zsh/wunderprompt/prompt $?`'
 RPROMPT='%{$FG[240]%}[%~] (%D %*)%{$reset_color%}'
 
+# Load in additional files #
+############################
+
+. ~/.zsh/git.zsh
+
+# Keybindings #
+###############
+
 # Keybindings to make special keys work - https://wiki.archlinux.org/index.php/Zsh#Key_Bindings
+bindkey -v # vi mode
 bindkey "\e[1~" beginning-of-line # Home
 bindkey "\e[4~" end-of-line # End
 bindkey "\e[5~" beginning-of-history # PageUp
@@ -88,6 +102,45 @@ bindkey "\e[3~" delete-char # Del
 
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+
+## From Burke's configuration
+#bindkey "^B" backward-char
+#bindkey "^A" beginning-of-line
+#bindkey "^E" end-of-line
+#bindkey "^F" forward-char
+#bindkey "^X^F" vi-find-next-char
+#bindkey "^N" down-line-or-history
+#bindkey "^R" history-incremental-search-backward
+#bindkey "^S" history-incremental-search-forward
+#bindkey "^X^N" infer-next-history
+#bindkey "^P" up-line-or-history
+#bindkey "^H" backward-delete-char
+#bindkey "^W" backward-kill-word
+#bindkey "^X^J" vi-join
+#bindkey "^K" kill-line
+#bindkey "^X^K" kill-buffer
+#bindkey "^U" kill-whole-line
+#bindkey "^X^B" vi-match-bracket
+#bindkey "^X^O" overwrite-mode
+#bindkey "^V" quoted-insert
+#bindkey "^T" transpose-chars
+#bindkey "^Y" yank
+#bindkey "^D" delete-char-or-list
+#bindkey "^X*" expand-word
+#bindkey "^XG" list-expand
+#bindkey "^Xg " list-expand
+#bindkey "^M" accept-line
+#bindkey "^J" accept-line
+#bindkey "^O" accept-line-and-down-history
+#bindkey "^X^V" vi-cmd-mode
+#bindkey "^L" clear-screen
+#bindkey "^X^X" exchange-point-and-mark
+#bindkey "^Q" push-line
+#bindkey "^G" send-break
+#bindkey "^@" set-mark-command
+#bindkey "^Xu " undo
+#bindkey "^X^U" undo
+#bindkey "^_" undo
 
 # Aliases #
 ###########
