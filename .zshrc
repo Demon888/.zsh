@@ -70,6 +70,8 @@ RPROMPT='%{$FG[240]%}[%~] (%D %*)%{$reset_color%}'
 #. ~/.config.d/zsh/fasd.zsh
 #. ~/.private.zsh
 . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. /etc/zsh_command_not_found
+
 
 # print the hostname at the top of new sessions
 hostname | toilet -f future --metal
