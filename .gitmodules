@@ -1,3 +1,6 @@
 [submodule "wunderprompt"]
 	path = wunderprompt
 	url = git@github.com:BenBergman/wunderprompt.git
+[submodule "zsh-syntax-highlighting"]
+	path = zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
