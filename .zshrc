@@ -62,15 +62,15 @@ RPROMPT='%{$FG[240]%}[%~] (%D %*)%{$reset_color%}'
 # Load in additional files #
 ############################
 
-. ~/.zsh/keybindings.zsh
-. ~/.zsh/git.zsh
-. ~/.zsh/completion.zsh
-. ~/.zsh/aliases.zsh
-. ~/.zsh/functions.zsh
-#. ~/.config.d/zsh/fasd.zsh
-#. ~/.private.zsh
-. ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. /etc/zsh_command_not_found
+[[ -r ~/.zsh/keybindings.zsh                                     ]] && . ~/.zsh/keybindings.zsh
+[[ -r ~/.zsh/git.zsh                                             ]] && . ~/.zsh/git.zsh
+[[ -r ~/.zsh/completion.zsh                                      ]] && . ~/.zsh/completion.zsh
+[[ -r ~/.zsh/aliases.zsh                                         ]] && . ~/.zsh/aliases.zsh
+[[ -r ~/.zsh/functions.zsh                                       ]] && . ~/.zsh/functions.zsh
+#[[ -r ~/.config.d/zsh/fasd.zsh                                   ]] && . ~/.config.d/zsh/fasd.zsh
+#[[ -r ~/.private.zsh                                             ]] && . ~/.private.zsh
+[[ -r ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -r /etc/zsh_command_not_found                                 ]] && . /etc/zsh_command_not_found
 
 
 # print the hostname at the top of new sessions
