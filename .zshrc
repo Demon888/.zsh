@@ -13,6 +13,7 @@ export EMAIL="ben@benbergman.ca"
 
 export EDITOR="vim"
 export PAGER="less"
+export LESS="" # required for git pager to ignore its own defaults
 
 # Head of PATH
 P="$HOME/bin"
@@ -57,7 +58,7 @@ done
 # An Xterm 256 colour chart can be found here: http://upload.wikimedia.org/wikipedia/commons/9/95/Xterm_color_chart.png
 
 PROMPT='`~/.zsh/wunderprompt/prompt $?`'
-RPROMPT='%{$FG[240]%}[%~] (%D %*)%{$reset_color%}'
+RPROMPT='%{$FG[240]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 
 # Load in additional files #
 ############################
