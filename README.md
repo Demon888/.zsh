@@ -27,7 +27,7 @@ I have made some effort to make my configuration cross platform compatible, but 
 ## TODO:
 
 * Simplify zshrc
-** Break zshrc into smaller related chunks
-** Move any chunks that could be shared between shells (aliases, etc.) into a submodule
+  * Break zshrc into smaller related chunks
+  * Move any chunks that could be shared between shells (aliases, etc.) into a submodule
 
 [zsh]:http://www.zsh.org
