@@ -29,11 +29,11 @@ autoload -U compinit && compinit
 
 setopt appendhistory
 setopt autocd
-setopt auto_pushd         # cd command pushes directories to the pushd/popd stack
+setopt auto_pushd       # cd command pushes directories to the pushd/popd stack
 setopt completealiases
-setopt correct            # attempt to correct spelling
-setopt dvorak             # use Dvorak instead of qwerty as basis for typo correction
-setopt prompt_subst
+setopt correct          # attempt to correct spelling
+setopt dvorak           # use Dvorak instead of qwerty as basis for typo correction
+setopt prompt_subst     # allow prompt to be regenerated on each line
 
 # Spectrum (https://github.com/sykora/etc/blob/master/zsh/functions/spectrum)
 # A script to make using 256 colors in zsh less painful.
@@ -57,7 +57,7 @@ done
 # Spectrum END
 # An Xterm 256 colour chart can be found here: http://upload.wikimedia.org/wikipedia/commons/9/95/Xterm_color_chart.png
 
-PROMPT='`~/.zsh/wunderprompt/prompt $?`'
+PROMPT='`~/.zsh/wunderprompt/prompt $?`'  # wunderprompt (https://github.com/BenBergman/wunderprompt.git)
 RPROMPT='%{$FG[240]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 
 # Load in additional files #
