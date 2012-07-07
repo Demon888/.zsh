@@ -13,7 +13,7 @@ export EMAIL="ben@benbergman.ca"
 
 export EDITOR="vim"
 export PAGER="less"
-export LESS="" # was previously unset; needed to be set for git to abandon it's own settings
+export LESS="R" # was previously unset; needed to be set for git to abandon it's own settings
 
 # Head of PATH
 P="$HOME/bin"
