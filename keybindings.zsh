@@ -35,6 +35,20 @@ bindkey "\e[3~" delete-char # Del
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
+# Change colour of cursor when in vicmd mode
+zle-keymap-select () {
+  if [ $KEYMAP = vicmd ]; then
+    echo -ne "\033]12;red\007"
+  else
+    echo -ne "\033]12;grey\007"
+  fi
+}; zle -N zle-keymap-select
+zle-line-init () {
+  zle -K viins
+  echo -ne "\033]12;grey\007"
+}; zle -N zle-line-init
+
+
 ## From Burke's configuration
 #bindkey "^B" backward-char
 #bindkey "^A" beginning-of-line
