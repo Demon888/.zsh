@@ -73,6 +73,7 @@ RPROMPT='%{$FG[240]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 [[ -r ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ -r /etc/zsh_command_not_found                                 ]] && . /etc/zsh_command_not_found
 
+eval $( dircolors -b $HOME/.zsh/LS_COLORS/LS_COLORS )
 
 # print the hostname at the top of new sessions
 hostname | toilet -f future --metal
