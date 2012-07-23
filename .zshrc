@@ -74,7 +74,9 @@ RPROMPT='%{$FG[240]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 [[ -r /etc/zsh_command_not_found                                 ]] && . /etc/zsh_command_not_found
 
 eval $( dircolors -b $HOME/.zsh/LS_COLORS/LS_COLORS )
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
+# 'root' did not work on my Arch Linux MacBook and instead caused all keystrokes to beep
+#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # print the hostname at the top of new sessions
 hostname | toilet -f future --metal
