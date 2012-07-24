@@ -94,5 +94,8 @@ function env() {
   exec /usr/bin/env "$@" | grep -v ^LESS_TERMCAP_
 }
 
+# make sure tmux is always run with 256 colours
+alias tmux="tmux -2"
+
 # open nautilus from current location
 alias n="nautilus ."
