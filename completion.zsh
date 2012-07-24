@@ -7,6 +7,8 @@ zstyle ':completion:*' list-colors 'reply=( "=(#b)(*$VAR)(?)*=00=$color[green]=$
 autoload -U compinit
 compinit
 
+setopt nolist_beep
+
 # cache completions
 zstyle ':completion::complete:*' use-cache 1
 
