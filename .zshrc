@@ -73,6 +73,8 @@ RPROMPT='%{$FG[240]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 [[ -r ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ -r /etc/zsh_command_not_found                                 ]] && . /etc/zsh_command_not_found
 
+command -v pacman-color >/dev/null 2>&1 && export PACMAN=pacman-color
+
 eval $( dircolors -b $HOME/.zsh/LS_COLORS/LS_COLORS )
 # 'root' did not work on my Arch Linux MacBook and instead caused all keystrokes to beep
 #ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
