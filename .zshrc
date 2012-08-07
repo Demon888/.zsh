@@ -69,7 +69,7 @@ RPROMPT='%{$FG[240]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 [[ -r ~/.zsh/aliases.zsh                                         ]] && . ~/.zsh/aliases.zsh
 [[ -r ~/.zsh/functions.zsh                                       ]] && . ~/.zsh/functions.zsh
 #[[ -r ~/.config.d/zsh/fasd.zsh                                   ]] && . ~/.config.d/zsh/fasd.zsh
-#[[ -r ~/.private.zsh                                             ]] && . ~/.private.zsh
+[[ -r ~/.private.zsh                                             ]] && . ~/.private.zsh
 [[ -r ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ -r /etc/zsh_command_not_found                                 ]] && . /etc/zsh_command_not_found
 
