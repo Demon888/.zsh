@@ -12,6 +12,11 @@ export NAME="Benjamin Bergman"
 export EMAIL="ben@benbergman.ca"
 
 export EDITOR="vim"
+# I'm not really sure I want this yet
+#VLESS=$(find /usr/share/vim -name 'less.sh')
+#if [ ! -z $VLESS ]; then
+#  alias less=$VLESS
+#fi
 export PAGER="less"
 export LESS="R" # was previously unset; needed to be set for git to abandon it's own settings
 
