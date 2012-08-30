@@ -86,4 +86,4 @@ eval $( dircolors -b $HOME/.zsh/LS_COLORS/LS_COLORS )
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # print the hostname at the top of new sessions
-hostname | toilet -f future --metal
+command -v toilet >/dev/null 2>&1 && hostname | toilet -f future --metal || hostname
