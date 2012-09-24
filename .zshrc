@@ -18,7 +18,7 @@ export EDITOR="vim"
 #  alias less=$VLESS
 #fi
 export PAGER="less"
-export LESS="R" # was previously unset; needed to be set for git to abandon it's own settings
+export LESS="Rm" # was previously unset; needed to be set for git to abandon it's own settings
 
 # Head of PATH
 P="$HOME/bin"
