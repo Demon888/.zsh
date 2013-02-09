@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=25000
-SAVEHIST=10000
+HISTSIZE=250000
+SAVEHIST=100000
 # End of lines configured by zsh-newuser-install
 
 OS=$(uname -s)
@@ -87,3 +87,5 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # print the hostname at the top of new sessions
 command -v toilet >/dev/null 2>&1 && hostname | toilet -f future --metal || hostname
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
