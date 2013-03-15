@@ -99,3 +99,6 @@ alias tmux="tmux -2"
 
 # open nautilus from current location
 alias n="nautilus ."
+
+# use git-achievements, if available
+command -v git-achievements >/dev/null 2>&1 && alias git="git-achievements"

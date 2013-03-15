@@ -24,6 +24,7 @@ export LESS="Rm" # was previously unset; needed to be set for git to abandon it'
 P="$HOME/bin"
 P="$P:$HOME/.bin"
 P="$P:$HOME/git/git-hooks"
+P="$P:$HOME/git/git-achievements"
 P="$P:/usr/share/perl5/vendor_perl/auto/share/dist/Cope"
 # Tail of PATH
 export PATH="$P:$PATH"
