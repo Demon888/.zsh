@@ -63,7 +63,7 @@ done
 # An Xterm 256 colour chart can be found here: http://upload.wikimedia.org/wikipedia/commons/9/95/Xterm_color_chart.png
 
 PROMPT='`~/.zsh/wunderprompt/prompt $?`'  # wunderprompt (https://github.com/BenBergman/wunderprompt.git)
-RPROMPT='%{$FG[240]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
+RPROMPT='%{$FG[93]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 
 # Load in additional files #
 ############################
