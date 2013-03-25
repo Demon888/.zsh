@@ -48,6 +48,11 @@ zle-line-init () {
   echo -ne "\033]12;grey\007"
 }; zle -N zle-line-init
 
+# Edit commands in your $EDITOR
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 
 ## From Burke's configuration
 #bindkey "^B" backward-char
