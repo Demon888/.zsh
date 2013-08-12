@@ -77,7 +77,7 @@ RPROMPT='%{$FG[93]%}[%~] (%D %D{%H:%M:%S})%{$reset_color%}'
 #[[ -r ~/.config.d/zsh/fasd.zsh                                   ]] && . ~/.config.d/zsh/fasd.zsh
 [[ -r ~/.private.zsh                                             ]] && . ~/.private.zsh
 [[ -r ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[[ -r /etc/zsh_command_not_found                                 ]] && . /etc/zsh_command_not_found
+[[ -r /etc/profile.d/cnf.sh                                      ]] && . /etc/profile.d/cnf.sh
 
 eval $( dircolors -b $HOME/.zsh/LS_COLORS/LS_COLORS )
 # 'root' did not work on my Arch Linux MacBook and instead caused all keystrokes to beep
