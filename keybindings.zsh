@@ -49,9 +49,10 @@ bindkey "^[[B" history-beginning-search-forward
 #}; zle -N zle-line-init
 
 # Edit commands in your $EDITOR
-autoload edit-command-line
+autoload -U edit-command-line
 zle -N edit-command-line
-bindkey '^X^E' edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
 
 
 ## From Burke's configuration
