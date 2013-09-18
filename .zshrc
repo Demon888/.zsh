@@ -11,6 +11,9 @@ VER=$(uname -r)
 export NAME="Benjamin Bergman"
 export EMAIL="ben@benbergman.ca"
 
+# Report CPU usage for commands that run longer than $REPORTTIME seconds
+export REPORTTIME=10
+
 export EDITOR="vim"
 # I'm not really sure I want this yet
 #VLESS=$(find /usr/share/vim -name 'less.sh')
