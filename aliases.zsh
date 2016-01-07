@@ -30,6 +30,8 @@ alias du1='du --max-depth=1'
 alias hist='history | grep $1'      # requires an argument
 alias openports='netstat --all --numeric --programs --inet'
 alias pg='ps -Af | grep $1'         # requires an argument
+autoload -U zmv
+alias mmv='noglob zmv -W'
 
 # privileged access
 if [ $UID -ne 0 ]; then
@@ -94,10 +96,22 @@ function env() {
 }
 
 # make sure tmux is always run with 256 colours
-alias tmux="tmux -2"
+#alias tmux="tmux -2"
+#
+# create a new background tmux session (works from within an existing tmux session)
+alias tnew-old="TMUX= tmux new-session -d -s"
+tnew() {
+    NEW_TASK="$*";
+    NEW_TASK_PATH="$HOME/tasks/$NEW_TASK";
+    mkdir -p "$NEW_TASK_PATH";
+    TMUX= tmux new-session -d -s "$NEW_TASK" -c "$NEW_TASK_PATH";
+}
 
 # open nautilus from current location
 alias n="nautilus ."
+
+# run all TAP tests from the current directory recursively
+alias prover="prove -j 9 -r"
 
 # use git-achievements, if available
 command -v git-achievements >/dev/null 2>&1 && alias git="git-achievements"
