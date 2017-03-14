@@ -91,3 +91,5 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 command -v toilet >/dev/null 2>&1 && hostname | toilet -f future --metal || hostname
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+eval "$(direnv hook zsh)"
